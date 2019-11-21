@@ -8,9 +8,7 @@ require('./models/Product');
 const app = express();
 
 mongoose.Promise = global.Promise;
-const uri = 'mongodb+srv://sonatakatt:sonatatuck@cluster0-jphyo.mongodb.net/test?retryWrites=true&w=majority'
-//mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/node-react-starter`);
-mongoose.connect(uri || `mongodb://localhost:27017/node-react-starter`);
+mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/node-react-starter`);
 
 app.use(bodyParser.json());
 
